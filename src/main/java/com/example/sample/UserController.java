@@ -36,7 +36,7 @@ public class UserController {
 	
 	
 	
-	//ç™»éŒ²
+	//“o˜^
 	@GetMapping
     public String signup(Model model) {
         model.addAttribute("userForm", new UserForm());
