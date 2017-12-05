@@ -1,1 +1,1 @@
-web: java $JAVA_OPTS -jar target/*.jar --server.port=5432
+web: java -jar target/SpringBoot-1.0.jar
