@@ -46,7 +46,7 @@ public class UserController {
 		return "signup";
 	}
 	
-	@RequestMapping({"/","/login"})
+	@RequestMapping("/")
 	String login() {
 		return "login";
 	}
