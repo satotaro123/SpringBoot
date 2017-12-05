@@ -34,8 +34,6 @@ public class UserController {
 	@Autowired
 	UserRepository repository;
 	
-	
-	
 	//“o˜^
 	@GetMapping
     public String signup(Model model) {
