@@ -25,7 +25,6 @@ import com.example.sample.UserRepository;
 //import java.util.List;
 
 @Controller
-@RequestMapping("signup")
 public class UserController {
 
 	@Autowired
@@ -35,16 +34,21 @@ public class UserController {
 	UserRepository repository;
 	
 	//“o˜^
-	@GetMapping
+	@GetMapping("/signup")
     public String signup(Model model) {
         model.addAttribute("userForm", new UserForm());
         return "signup";
     }
 	
-	@PostMapping
+	@PostMapping("/signup")
     public String signupPost(Model model, @Valid UserForm userForm, BindingResult bindingResult, HttpServletRequest request) {
 		userService.registerUser(userForm.getNo(),userForm.getUserid(), userForm.getUsername(),userForm.getOrgname(),userForm.getPassword(),"1","USER");
 		return "signup";
+	}
+	
+	@RequestMapping({"/","/login"})
+	String login() {
+		return "login";
 	}
 		
 	
